@@ -17,7 +17,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 COPY ngx_modules /root/ngx_modules
 COPY ngx_source /root/ngx_source
 RUN cd /root/ngx_source \
-    && ./configure \
+    && ./auto/configure \
       --with-cc-opt="$(dpkg-buildflags --get CFLAGS) $(dpkg-buildflags --get CPPFLAGS)" \
       --with-ld-opt="$(dpkg-buildflags --get LDFLAGS)" \
       --prefix=/usr/local \
@@ -43,7 +43,6 @@ RUN cd /root/ngx_source \
       --with-http_geoip_module \
       --with-http_gzip_static_module \
       --with-http_image_filter_module \
-      --with-http_spdy_module \
       --with-http_sub_module \
       --with-http_xslt_module \
       --add-module=/root/ngx_modules/ngx_devel_kit \
