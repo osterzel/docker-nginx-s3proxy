@@ -7,7 +7,7 @@ it through nginx - running in docker.
 
 Clone this repo:
 
-    git clone --recursive https://github.com/tinnet/docker-nginx-s3proxy.git
+    git clone --recursive https://github.com/osterzel/docker-nginx-s3proxy.git
 
 Build image:
 
@@ -23,6 +23,12 @@ Run a container from that image:
     -e S3PROXY_AWS_SECRET_KEY="<AWS_SECRET_KEY>" \
     -p 10080:80 \
     -d nginx-s3proxy
+
+# Optional extras
+
+* If you are also using this to PUT to S3, then you can set the additional environment variable:
+
+    MAX_BODY_SIZE="<MAX_BODY_SIZE>" See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
 
 # Known issues
 
