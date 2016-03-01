@@ -40,6 +40,6 @@ Run a container from that image:
 
 Based on:
 * [https://registry.hub.docker.com/_/debian/](https://registry.hub.docker.com/_/debian/)
-* [(http://nginx.org/](http://nginx.org/)
+* [http://nginx.org/](http://nginx.org/)
 * [https://github.com/anomalizer/ngx_aws_auth](https://github.com/anomalizer/ngx_aws_auth)
 * [https://github.com/kreuzwerker/envplate](https://github.com/kreuzwerker/envplate)
