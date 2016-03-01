@@ -28,7 +28,8 @@ Run a container from that image:
 
 If you are also using this to PUT to S3, then you can set the additional environment variable:
     
-    MAX_BODY_SIZE="<MAX_BODY_SIZE>" See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
+    MAX_BODY_SIZE="<MAX_BODY_SIZE>" 
+See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
 
 # Known issues
 
