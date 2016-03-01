@@ -17,7 +17,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 COPY ngx_modules /root/ngx_modules
 COPY ngx_source /root/ngx_source
 RUN cd /root/ngx_source \
-    && . ./auto/configure \
+    && ./auto/configure \
       --with-cc-opt="$(dpkg-buildflags --get CFLAGS) $(dpkg-buildflags --get CPPFLAGS)" \
       --with-ld-opt="$(dpkg-buildflags --get LDFLAGS)" \
       --prefix=/usr/local \
