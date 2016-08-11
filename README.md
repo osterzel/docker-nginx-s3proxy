@@ -35,6 +35,7 @@ See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.htm
 
 ## Proxy Caching
 For proxy caching there are the additional arguments avaialble:  
+
     PROXY_CACHE_VALID="<TIME>"  
     PROXY_CACHE_VALID_200="<TIME>"  
     PROXY_CACHE_VALID_301="<TIME>"  
