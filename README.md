@@ -36,12 +36,7 @@ See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.htm
 ## Proxy Caching
 For proxy caching there are the additional arguments avaialble:  
 
-    PROXY_CACHE_VALID="<TIME>"  
     PROXY_CACHE_VALID_200="<TIME>"  
-    PROXY_CACHE_VALID_301="<TIME>"  
-    PROXY_CACHE_VALID_302="<TIME>"  
-    PROXY_CACHE_VALID_404="<TIME>"  
-    PROXY_CACHE_VALID_ANY="<TIME>"  
 
 If the proxy cache without a response code is used, then it will cache 200, 301, and 302 responses with the stated duration. See [#proxy_cache_valid](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_valid) for more details on the options for TIME.
 
