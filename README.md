@@ -33,13 +33,10 @@ If you are also using this to PUT to S3, then you can set the additional environ
 
 See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
 
-## Proxy Caching
-For proxy caching there are the additional arguments avaialble:  
+## Proxy Cache
+The proxy cache has some settings which can be configured:
 
-    PROXY_CACHE_VALID_200="<TIME>"  
-
-Currently only 200 responses are allowed to be cached. See [#proxy_cache_valid](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_valid) for more details on the options for TIME.
-
+    PROXY_CACHE_SIZE="<SIZE>" Default:500m
 
 # Known issues
 
