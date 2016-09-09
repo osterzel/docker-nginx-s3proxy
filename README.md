@@ -1,5 +1,6 @@
 # nginx based proxy for s3 - docker
 
+Based upon the osterzel build, with additional features such as setting cache sizes and expiration times.
 Serve your static homepage from S3 while keeping the bucket private by proxying
 it through nginx - running in docker.
 
