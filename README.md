@@ -25,6 +25,10 @@ Run a container from that image:
     -d nginx-s3proxy
 
 # Optional extras
+Amazon appear to enforce setting your region in the URL, but not always. If you are getting 307 responses \
+then setting your region with the following might help
+
+    S3PROXY_AWS_REGION="<AWS_REGION>"
 
 If you are also using this to PUT to S3, then you can set the additional environment variable:
     
