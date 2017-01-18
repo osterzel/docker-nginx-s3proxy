@@ -1,5 +1,6 @@
 # nginx based proxy for s3 - docker
 
+Based upon the osterzel build, with additional features such as setting cache sizes and expiration times.
 Serve your static homepage from S3 while keeping the bucket private by proxying
 it through nginx - running in docker.
 
@@ -30,10 +31,19 @@ then setting your region with the following might help
 
     S3PROXY_AWS_REGION="<AWS_REGION>"
 
+## Max Body Size
 If you are also using this to PUT to S3, then you can set the additional environment variable:
     
     MAX_BODY_SIZE="<MAX_BODY_SIZE>" 
+
 See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
+
+## Proxy Cache
+The proxy cache has some settings which can be configured:
+
+    PROXY_CACHE_SIZE Default:500m The amount of disk space the proxy will use
+    PROXY_KEY_SIZE Default:10m The size of the key store, 10m gives about 80000 keys
+    PROXY_INACTIVE_AGE Default:12h The maxiumum age of a file in the cache that is inactive before it is purged.
 
 # Known issues
 
