@@ -25,16 +25,21 @@ Run a container from that image:
     -p 10080:80 \
     -d nginx-s3proxy
 
-# Optional extras
+## Optional extras
+# AWS Region
+Amazon appear to enforce setting your region in the URL, but not always. If you are getting 307 responses \
+then setting your region with the following might help
 
-## Max Body Size
+    S3PROXY_AWS_REGION="<AWS_REGION>"
+
+# Max Body Size
 If you are also using this to PUT to S3, then you can set the additional environment variable:
     
     MAX_BODY_SIZE="<MAX_BODY_SIZE>" 
 
 See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) for correct settings
 
-## Proxy Cache
+# Proxy Cache
 The proxy cache has some settings which can be configured:
 
     PROXY_CACHE_SIZE Default:500m The amount of disk space the proxy will use
