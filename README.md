@@ -42,6 +42,7 @@ See [Nginx documentation](http://nginx.org/en/docs/http/ngx_http_core_module.htm
 # Proxy Cache
 The proxy cache has some settings which can be configured:
 
+    PROXY_BUFFERING Default:on The switch to enable or disable the proxy, set to off if you don't want it
     PROXY_CACHE_SIZE Default:500m The amount of disk space the proxy will use
     PROXY_KEY_SIZE Default:10m The size of the key store, 10m gives about 80000 keys
     PROXY_INACTIVE_AGE Default:12h The maxiumum age of a file in the cache that is inactive before it is purged.
